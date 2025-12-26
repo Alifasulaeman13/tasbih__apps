@@ -1,16 +1,104 @@
-# flutter_application_1
+# 📿 Tasbih Digital - Aplikasi Tasbih & Waktu Sholat
 
-A new Flutter project.
+Aplikasi Tasbih Digital dengan fitur alarm waktu sholat otomatis untuk Bogor Barat.
 
-## Getting Started
+## ✨ Fitur Utama
 
-This project is a starting point for a Flutter application.
+- **📿 Digital Tasbih Counter** - Hitung dzikir dengan tap
+- **🕌 Waktu Sholat Otomatis** - Untuk lokasi Bogor Barat (WIB)
+- **⏰ Alarm Sholat** - Notifikasi untuk 5 waktu sholat
+- **📊 Riwayat Dzikir** - Lihat histori dzikir harian
+- **🎨 UI Islami** - Desain indah dengan tema Islamic
 
-A few resources to get you started if this is your first Flutter project:
+## 🕌 Waktu Sholat
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Aplikasi ini menggunakan perhitungan waktu sholat akurat untuk:
+- **Lokasi**: Bogor Barat, Indonesia
+- **Timezone**: WIB (Asia/Jakarta)
+- **Metode**: Singapore (sesuai Kemenag RI)
+- **Madhab**: Shafi'i
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Fitur Waktu Sholat:
+- ✅ Countdown otomatis ke sholat berikutnya
+- ✅ Toggle alarm untuk setiap waktu sholat
+- ✅ Notifikasi meskipun aplikasi tertutup
+- ✅ Update otomatis setiap hari
+
+## 📱 Screenshot
+
+### Home Screen
+![Home Screen](screenshots/home_screen.png)
+
+### Prayer Times Screen
+![Prayer Times](screenshots/prayer_times_screen.png)
+
+### History Screen
+![History](screenshots/history_screen.png)
+
+## 🛠️ Teknologi
+
+- **Flutter** 3.35.7
+- **Dart** SDK ^3.7.0
+- **adhan** - Perhitungan waktu sholat
+- **flutter_local_notifications** - Notifikasi lokal
+- **sqflite** - Database lokal
+- **timezone** - Manajemen timezone
+
+## 📥 Instalasi
+
+### Requirement:
+- Flutter SDK 3.35.7 atau lebih baru
+- Android SDK (untuk build Android)
+- Git
+
+### Langkah Instalasi:
+
+```bash
+# Clone repository
+git clone https://github.com/Alifasulaeman13/tasbih__apps.git
+
+# Masuk ke directory
+cd tasbih__apps
+
+# Install dependencies
+flutter pub get
+
+# Run aplikasi
+flutter run
+```
+
+### Build APK:
+
+```bash
+# Debug APK
+flutter build apk --debug
+
+# Release APK
+flutter build apk --release
+```
+
+File APK akan tersedia di: `build/app/outputs/flutter-apk/`
+
+## 🔧 Konfigurasi
+
+### Ubah Lokasi Waktu Sholat:
+
+Edit file `lib/services/prayer_service.dart`:
+
+```dart
+// Ubah koordinat sesuai lokasi Anda
+static const double _latitude = -6.5950;  // Latitude
+static const double _longitude = 106.7970; // Longitude
+```
+
+## 📝 Lisensi
+
+Project ini dibuat untuk keperluan ibadah dan edukasi.
+
+## 👨‍💻 Developer
+
+Alifa Sulaeman (@Alifasulaeman13)
+
+---
+
+**Barakallahu fiikum** 🤲

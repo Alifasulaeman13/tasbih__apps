@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter/services.dart';
 import 'history_screen.dart';
+import 'prayer_times_screen.dart';
 import '../services/tasbih_service.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -26,10 +27,7 @@ class _HomeScreenState extends State<HomeScreen>
       vsync: this,
     );
     _scaleAnimation = Tween<double>(begin: 1, end: 0.95).animate(
-      CurvedAnimation(
-        parent: _animationController,
-        curve: Curves.easeInOut,
-      ),
+      CurvedAnimation(parent: _animationController, curve: Curves.easeInOut),
     );
   }
 
@@ -87,10 +85,7 @@ class _HomeScreenState extends State<HomeScreen>
               onPressed: () => Navigator.of(context).pop(),
             ),
             TextButton(
-              child: const Text(
-                'Reset',
-                style: TextStyle(color: Colors.red),
-              ),
+              child: const Text('Reset', style: TextStyle(color: Colors.red)),
               onPressed: () {
                 setState(() {
                   _counter = 0;
@@ -201,8 +196,21 @@ class _HomeScreenState extends State<HomeScreen>
                   ),
                   actions: [
                     IconButton(
-                      icon: const Icon(Icons.remove_circle_outline,
-                          color: Colors.white),
+                      icon: const Icon(Icons.alarm, color: Colors.white),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const PrayerTimesScreen(),
+                          ),
+                        );
+                      },
+                    ),
+                    IconButton(
+                      icon: const Icon(
+                        Icons.remove_circle_outline,
+                        color: Colors.white,
+                      ),
                       onPressed: _showDecrementDialog,
                     ),
                     IconButton(
@@ -299,10 +307,7 @@ class _HomeScreenState extends State<HomeScreen>
                       const SizedBox(height: 8),
                       const Text(
                         'Subhanallah',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                        ),
+                        style: TextStyle(color: Colors.white, fontSize: 18),
                       ),
                     ],
                   ),
