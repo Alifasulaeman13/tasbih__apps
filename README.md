@@ -26,14 +26,18 @@ Aplikasi ini menggunakan perhitungan waktu sholat akurat untuk:
 
 ## 📱 Screenshot
 
-### Home Screen
-![Home Screen](screenshots/home_screen.png)
-
-### Prayer Times Screen
-![Prayer Times](screenshots/prayer_times_screen.png)
-
-### History Screen
-![History](screenshots/history_screen.png)
+<table>
+  <tr>
+    <td align="center"><b>Home Screen</b></td>
+    <td align="center"><b>Prayer Times</b></td>
+    <td align="center"><b>History</b></td>
+  </tr>
+  <tr>
+    <td><img src="screenshots/home_screen.png" width="250"/></td>
+    <td><img src="screenshots/prayer_times_screen.png" width="250"/></td>
+    <td><img src="screenshots/history_screen.png" width="250"/></td>
+  </tr>
+</table>
 
 ## 🛠️ Teknologi
 
